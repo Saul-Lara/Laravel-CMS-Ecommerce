@@ -1,9 +1,7 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 # Laravel-CMS-Ecommerce
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Saul-Lara/Laravel-CMS-Ecommerce?style=flat-square">
-<img alt="GitHub" src="https://img.shields.io/github/license/Saul-Lara/Laravel-CMS-Ecommerce?style=flat-square">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Saul-Lara/Laravel-CMS-Ecommerce?color=green&style=flat-square">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Saul-Lara/Laravel-CMS-Ecommerce?style=flat-square"> <img alt="GitHub" src="https://img.shields.io/github/license/Saul-Lara/Laravel-CMS-Ecommerce?style=flat-square"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Saul-Lara/Laravel-CMS-Ecommerce?color=green&style=flat-square">
 
  CMS with E-Commerce build with Laravel
 
