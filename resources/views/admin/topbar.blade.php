@@ -7,16 +7,16 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown">
             <a href="#" data-toggle="dropdown" aria-label="Mas opciones" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <figure class="avatar mr-2" data-initial="SH" style="background-color: #ff9c36; color: #ffffff;">
+                <figure class="avatar mr-2" data-initial="{{ Auth::User()->name[0] }}{{ Auth::User()->lastname[0] }}" style="background-color: #ff9c36; color: #ffffff;">
                 </figure>
-                <div class="d-sm-none d-lg-inline-block">Hola, Saul Hernandez</div>
+                <div class="d-sm-none d-lg-inline-block">Hola, {{ Auth::User()->name }} {{ Auth::User()->lastname }} </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="#" aria-label="Ver perfil" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Perfil
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" aria-label="Cerrar sesion" class="btn-exit-system dropdown-item has-icon text-danger">
+                <a href="{{ url('/admin/logout') }}" aria-label="Cerrar sesion" class="btn-exit-system dropdown-item has-icon text-danger">
                     <i class="fas fa-sign-out-alt"></i> Cerrar sesion
                 </a>
             </div>
