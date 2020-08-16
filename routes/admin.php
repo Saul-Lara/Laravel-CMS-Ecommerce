@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function(){
 
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/', 'Admin\DashboardController@getDashboard')->name('admin.dashboard');
 
     Route::get('/login', 'Auth\AdminLoginController@getLogin')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@postLogin')->name('admin.login');
