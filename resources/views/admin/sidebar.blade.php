@@ -14,6 +14,18 @@
                 </a>
             </li>
 
+            <hr>
+            
+            <li class="menu-header">Administracion</li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-user-friends"></i>
+                    <span>Usuarios</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ url('/') }}">Añadir un nuevo usuario</a></li>
+                    <li><a class="nav-link" href="{{ url('admin/users') }}">Ver usuarios actuales</a></li>
+                </ul>
+            </li>
+
             <li>
                 <a class="nav-link" href="{{ url('/admin/products') }}">
                     <i class="fas fa-boxes"></i>
@@ -21,22 +33,6 @@
                 </a>
             </li>
 
-            <li>
-                <a class="nav-link" href="{{ url('/admin/users') }}">
-                    <i class="fas fa-user-friends"></i>
-                    <span>Usuarios</span>
-                </a>
-            </li>
-
-            <hr>           
-              <li class="menu-header">Administracion</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-user-tag"></i> <span>Roles</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="roles/">Añadir un nuevo rol</a></li>
-                    <li><a class="nav-link" href="listaRoles/">Ver roles actuales</a></li>
-                </ul>
-            </li>
         </ul>
     </aside>
 </div>

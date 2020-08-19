@@ -32,6 +32,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="{{ url('/static/js/stisla.js') }}"></script>
     <script src="{{ url('/static/js/adminScripts.js') }}"></script>
+    <script src="{{ url('/static/libs/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ url('/static/js/admin.js') }}"></script>
 
 </head>
 
