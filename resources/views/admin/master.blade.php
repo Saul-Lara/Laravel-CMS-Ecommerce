@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>@yield('title') - MyCms</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="routeName" content="{{ Route::currentRouteName() }}">
 
@@ -48,8 +48,45 @@
 
             <!-- Main Content -->
             <div class="main-content">
-                @section('content')
-                @show
+                <section class="section">
+
+                    <!-- Header section -->
+                    <div class="section-header">
+                        <h1>@yield('title')</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active"><a href="{{ url('/admin') }}">Dashboard</a></div>
+                            @section('breadcrumb')
+                            @show
+                        </div>
+                    </div>
+
+                    @if (Session::has('message'))
+                    <!-- Message alert -->
+                    <div class="container">
+                        <div class="alert alert-{{ Session::get('typealert') }}" style="display:none;">
+                            {{ Session::get('message') }}
+                            @if ($errors->any())
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                            @endif
+                        </div>
+
+                        <script>
+                            $('.alert').slideDown();
+                            setTimeout(() => {
+                                $('.alert').slideUp();
+                            }, 8000);
+                        </script>
+                    </div>
+                    @endif
+
+                    <!-- Content section -->
+                    @section('content')
+                    @show
+                </section>
             </div>
 
             <footer class="main-footer">

@@ -27,6 +27,16 @@
                     <span>Usuarios</span>
                 </a>
             </li>
+
+            <hr>           
+              <li class="menu-header">Administracion</li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-user-tag"></i> <span>Roles</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="roles/">Añadir un nuevo rol</a></li>
+                    <li><a class="nav-link" href="listaRoles/">Ver roles actuales</a></li>
+                </ul>
+            </li>
         </ul>
     </aside>
 </div>
