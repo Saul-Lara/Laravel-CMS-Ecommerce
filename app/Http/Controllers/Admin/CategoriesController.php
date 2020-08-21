@@ -88,4 +88,14 @@ class CategoriesController extends Controller
             endif;
         endif;
     }
+
+    public function getCategoryDelete($id)
+    {
+        $category = Category::findOrFail($id);
+
+        if($category->delete()):
+            return back()->with('message', 'Se ha eliminado con exito.')
+        ->with('typealert', 'success');
+        endif;
+    }
 }

@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <div class="breadcrumb-item">
-    <a href="{{ url('/admin/categories') }}"> Categorias</a>
+    Categorias
 </div>
 @endsection
 
