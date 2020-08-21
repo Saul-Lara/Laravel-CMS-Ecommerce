@@ -93,8 +93,7 @@
 
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2020 <div class="bullet"></div><a href="https://autoin.com.mx/">Auto In
-                        Refaccionaria</a>
+                    Copyright &copy; 2020 <div class="bullet"></div><a href="{{ env('COMPANY_SITE') }}">{{ env('COMPANY') }}</a>
                 </div>
                 <div class="footer-right">
                     Version 1.2.0 (Laravel)

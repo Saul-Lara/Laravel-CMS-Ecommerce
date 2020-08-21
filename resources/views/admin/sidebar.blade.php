@@ -1,10 +1,10 @@
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ url('/admin') }}">asd</a>
+            <a href="{{ url('/admin') }}">{{ env('SYSTEM') }}</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="{{ url('/admin') }}">as</a>
+            <a href="{{ url('/admin') }}">{{ env('SYSTEM_SM') }}</a>
         </div>
         <ul class="sidebar-menu">
             <li class="active">
