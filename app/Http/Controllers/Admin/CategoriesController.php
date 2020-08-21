@@ -40,7 +40,6 @@ class CategoriesController extends Controller
         else:
             $c = new Category;
 
-            $c->module = $request->input('module');
             $c->name = e($request->input('name'));
             $c->slug = Str::slug($request->input('name'));
             $c->icon = e($request->input('icon'));

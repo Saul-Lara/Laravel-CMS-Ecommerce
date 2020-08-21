@@ -33,19 +33,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="module">Modulo</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="far fa-keyboard"></i>
-                                </div>
-                            </div>
-                            {!! Form::select('module', getModulesArray(), 0 ,
-                            ['class' => 'form-control',]) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="icon">Icono</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
