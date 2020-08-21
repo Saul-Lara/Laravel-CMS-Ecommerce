@@ -20,6 +20,8 @@ Route::prefix('admin')->group(function(){
     // Module Categories
     Route::get('/categories', 'Admin\CategoriesController@getHome')->name('admin.categories');
     Route::post('/category/add', 'Admin\CategoriesController@postCategoryAdd')->name('admin.categories');
+    Route::get('/category/{id}/edit', 'Admin\CategoriesController@getCategoryEdit')->name('admin.categories');
+    Route::post('/category/{id}/edit', 'Admin\CategoriesController@postCategoryEdit')->name('admin.categories');
 
     Route::get('/login', 'Auth\AdminLoginController@getLogin')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@postLogin')->name('admin.login');

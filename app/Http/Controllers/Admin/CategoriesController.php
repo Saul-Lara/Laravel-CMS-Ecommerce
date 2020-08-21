@@ -52,4 +52,40 @@ class CategoriesController extends Controller
             endif;
         endif;
     }
+
+    public function getCategoryEdit($id)
+    {
+        $category = Category::findOrFail($id);
+        $data = ['category' => $category];
+        return view('admin.categories.edit', $data);
+    }
+
+    public function postCategoryEdit(Request $request, $id){
+        $rules = [
+            'name' => 'required',
+            'icon' => 'required',
+        ];
+
+        $messages = [
+            'name.required' => 'Se requiere de un nombre para la categoria.',
+            'icon.required' => 'Se requiere un icono para la categoria.'
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if($validator->fails()):
+            return back()->withErrors($validator)->with('message', 'Se ha producido un error.')
+            ->with('typealert', 'danger');
+        else:
+            $c = Category::findOrFail($id);
+
+            $c->name = e($request->input('name'));
+            $c->icon = e($request->input('icon'));
+
+            if($c->save()):
+                return back()->with('message', 'Se ha guardado con exito.')
+            ->with('typealert', 'success');
+            endif;
+        endif;
+    }
 }
