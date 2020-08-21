@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Http\Models\Category;
+
 class ProductController extends Controller
 {
     public function __construct()
@@ -23,10 +25,8 @@ class ProductController extends Controller
 
     public function getProductAdd()
     {
-        //$admins = Admin::orderBy('id', 'desc')->get();
-
-        //dd($admins);
-
-        return view('admin.products.add');
+        $categories = Category::pluck('name', 'id');
+        $data = ['categories' => $categories];
+        return view('admin.products.add', $data);
     }
 }
