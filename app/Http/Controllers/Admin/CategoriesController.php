@@ -18,7 +18,9 @@ class CategoriesController extends Controller
 
     public function getHome()
     {
-        return view('admin.categories.home');
+        $categories = Category::orderBy('id', 'asc')->get();
+        $data = ['categories' => $categories];
+        return view('admin.categories.home', $data);
     }
 
     public function postCategoryAdd(Request $request){
