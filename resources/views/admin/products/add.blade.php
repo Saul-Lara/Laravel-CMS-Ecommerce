@@ -131,65 +131,7 @@
                             {!! Form::submit('Agregar producto.', ['class' => 'btn btn-primary']) !!}    
                         </div>
                     </div>
-
-
-                    <!--      <div class="row">
-                        <div class="col-12 col-md-12 col-lg-6">
-                            <div class="form-group">
-                                <label>Clave del producto</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="fas fa-store-alt"></i>
-                                        </div>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Clave del producto..."
-                                        name="claveArticulo" required="">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Descripcion</label>
-                                <textarea class="form-control h-50" rows="4" required=""
-                                    name="descripcionArticulo"></textarea>
-                            </div>
-
-                        </div>
-
-                        <div class="col-12 col-md-12 col-lg-6">
-                            <div class="form-group">
-                                <label>Cantidad</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="fas fa-hashtag"></i>
-                                        </div>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Cantidad..." min="0"
-                                        value="0" name="cantidadProducto" required="">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Precio</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <i class="fas fa-money-bill-wave"></i>
-                                        </div>
-                                    </div>
-                                    <input type="number" class="form-control" placeholder="Precio..." min="0"
-                                        step="0.01" name="precioProducto" required="">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="card-footer text-right">
-                        <button class="btn btn-primary">Agregar producto.</button>
-                    </div>
-                -->
+                    
                 </div>
             </div>
         </div>
