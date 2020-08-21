@@ -18,6 +18,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ url('/static/css/adminStyle.css') }}">
     <link rel="stylesheet" href="{{ url('/static/css/adminComponents.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/css/bootstrap4/tail.select-default.min.css" rel="stylesheet" />
 
     <!-- General JS Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -30,10 +31,14 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    
     <script src="{{ url('/static/js/stisla.js') }}"></script>
     <script src="{{ url('/static/js/adminScripts.js') }}"></script>
     <script src="{{ url('/static/libs/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ url('/static/js/admin.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/js/tail.select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/langs/tail.select-es.js"></script>
 
 </head>
 

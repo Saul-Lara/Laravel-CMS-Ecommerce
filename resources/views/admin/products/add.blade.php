@@ -78,7 +78,7 @@
                                             <i class="fas fa-money-bill-wave"></i>
                                         </div>
                                     </div>
-                                    {!! Form::select('indiscount', ['0' => 'No', '1' => 'Si'], 0 , ['class' => 'form-control',]) !!}
+                                    {!! Form::select('indiscount', ['0' => 'No', '1' => 'Si'], 0 , ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                         </div>

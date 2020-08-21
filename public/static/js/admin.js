@@ -3,6 +3,11 @@ var base = location.protocol + '//' + location.host;
 
 $(document).ready(function(){
     editor_init('editor');
+
+    tail.select(".select-search", {
+        search: true,
+        locale: "es"
+    });
 });
 
 function editor_init(field){
@@ -15,3 +20,4 @@ function editor_init(field){
         ]
     });
 }
+
