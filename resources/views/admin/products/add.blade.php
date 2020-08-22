@@ -13,7 +13,7 @@
 
 @section('content')
 <div class="section-body">
-    {!! Form::open(['url' => '/admin/product/add']) !!}
+    {!! Form::open(['url' => '/admin/product/add', 'files' => true]) !!}
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -49,7 +49,7 @@
                                 <label for="img">Imagen destacada</label>
                                 <div class="custom-file">
                                     {!! Form::file('img', ['class' => 'custom-file-input', 'id' => 'customFile',
-                                    'required']) !!}
+                                    'accept' => 'image/*']) !!}
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>
