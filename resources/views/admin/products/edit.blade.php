@@ -7,7 +7,7 @@
     <a href="{{ url('/admin/products') }}"> Productos</a>
 </div>
 <div class="breadcrumb-item">
-    Agregar producto
+    Editar producto
 </div>
 @endsection
 
@@ -16,7 +16,7 @@
     <div class="row">
 
         <div class="col-md-9">
-            {!! Form::open(['url' => '/admin/product/add', 'files' => true]) !!}
+            {!! Form::open(['url' => '/admin/product/'.$product->id.'/edit', 'files' => true]) !!}
             <div class="card">
                 <div class="card-body">
                     <div class="row">
@@ -103,6 +103,22 @@
                                     {!! Form::number('discount',$product->discount, ['class' => 'form-control', 'min' =>
                                     '0.00',
                                     'step' => '0.01', 'required']) !!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="indiscount">Estado</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                    {!! Form::select('status', ['0' => 'Borrador', '1' => 'Publico'], $product->status ,
+                                    ['class' =>
+                                    'form-control']) !!}
                                 </div>
                             </div>
                         </div>
