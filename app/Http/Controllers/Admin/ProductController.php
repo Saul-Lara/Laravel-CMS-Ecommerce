@@ -19,11 +19,9 @@ class ProductController extends Controller
 
     public function getProducts()
     {
-        //$admins = Admin::orderBy('id', 'desc')->get();
-
-        //dd($admins);
-
-        return view('admin.products.home');
+        $products = Product::orderBy('id', 'desc')->paginate(20);
+        $data = ['products' => $products];
+        return view('admin.products.home', $data);
     }
 
     public function getProductAdd()
