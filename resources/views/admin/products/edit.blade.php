@@ -165,16 +165,48 @@
             {!! Form::close() !!}
         </div>
 
-
         <div class="col-md-3">
             <div class="card">
                 <div class="card-header">
                     <h4>Imagen destacada</h4>
                 </div>
                 <div class="card-body">
-
                     <img src="{{ url('/uploads/'.$product->file_path.'/'.$product->image) }}"
                         alt="Imagen {{ $product->name }}" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4>Galeria</h4>
+                </div>
+                <div class="card-body">
+                    {!! Form::open(['url' => '/admin/product/'.$product->id.'/gallery/add', 'files' => true, 'id' =>
+                    'form_product_gallery']) !!}
+                    {!! Form::file('file_image', ['id' => 'product_file_image', 'accept' => 'image/*', 'style' =>
+                    'display: none;', 'required']) !!}
+                    {!! Form::close() !!}
+                    <a href="#" id="btn_product_file_image" class="btn btn-outline-primary btn-lg btn-block">
+                        <i class="fas fa-plus"></i>
+                    </a>
+
+                    <hr>
+
+                    <div class="row row-cols-2">
+                        @foreach ($product->getGallery as $image)
+                        <!--     <a href="{{ url('/admin/product/'.$image->id.'/delete') }}" type="button"
+                            class="btn btn-danger btn-action" data-toggle="tooltip" title="Eliminar"><i
+                                class="fas fa-trash-alt"></i></a>
+                            <img src="{{ url('/uploads/'.$image->file_path.'/t_'.$image->file_name) }}"> -->
+                        <div class="col">
+                            <img src="{{ url('/uploads/'.$image->file_path.'/t_'.$image->file_name) }}"
+                                class="img-fluid">
+                            <a href="{{ url('/admin/product/'.$product->id.'/gallery/'.$image->id.'/delete') }}" id="btn_product_file_image" class="btn btn-outline-danger btn-block">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
 
                 </div>
             </div>
